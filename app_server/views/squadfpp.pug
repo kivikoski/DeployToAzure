@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= 'Squad First Person Perspective statistics / EU'
+  ul
+    each stat in stats
+      li= stat.season + ': ' + stat.value
+

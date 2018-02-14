@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= 'Duo First Person Perspective Statistics / EU'
+  ul
+    each stat in stats
+      li= stat.season + ': ' + stat.value
+

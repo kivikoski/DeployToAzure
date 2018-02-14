@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+var ctrlduofpp = require('../controllers/ctrlduofpp');
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Jonas' });
-});
+router.get('/', ctrlduofpp.statslist);
 
 module.exports = router;
