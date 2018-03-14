@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+require('./app_server/models/db');
 const index = require('./app_server/routes/index');
 var duofpp = require('./app_server/routes/duofpp');
 var squadfpp = require('./app_server/routes/squadfpp');
