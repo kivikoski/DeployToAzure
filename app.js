@@ -4,8 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-require('./app_server/models/db');
+require('./app_api/models/db');
 const index = require('./app_server/routes/index');
+const apiRoutes = require ('./app_api/routes/indexApi');
 var duofpp = require('./app_server/routes/duofpp');
 var squadfpp = require('./app_server/routes/squadfpp');
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('./api', apiRoutes);
 app.use('/duofpp', duofpp);
 app.use('/squadfpp', squadfpp);
 
