@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 
-const duofppSchema = new mongoose.Schema ({Season:String, value:String});
-const squadfppSchema = new mongoose.Schema ({Season:String, value:String});
+const duofppSchema = new mongoose.Schema ({season:String, value:String});
+const squadfppSchema = new mongoose.Schema ({season:String, value:String});
 
-mongoose.model ('duofpp', duofppSchema, 'statslist');
-mongoose.model ('squadfpp', squadfppSchema, 'statslist');
+mongoose.model ('duofpp', duofppSchema, 'duofpp');
+mongoose.model ('squadfpp', squadfppSchema, 'squadfpp');
